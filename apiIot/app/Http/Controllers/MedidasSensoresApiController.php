@@ -1,5 +1,4 @@
 <?php
-// estou no SetorApiController.php
 namespace App\Http\Controllers;
 use App\Models\Sensores;
 use App\Models\MedidasSensores;
