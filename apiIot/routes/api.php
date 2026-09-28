@@ -13,3 +13,6 @@ Route::get('/user', function (Request $request) {
 // rotas para a api de medidasSensores
 Route::get('medidas',[MedidasSensoresApiController::class, 'listarApi']);
 Route::post('medidas/add',[MedidasSensoresApiController::class, 'addApi']);
+
+// rotas da dashboard
+Route::get('dashboard/{id}',[MedidasSensoresApiController::class, 'listarDashboard']);

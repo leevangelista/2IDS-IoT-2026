@@ -7,6 +7,26 @@ use Illuminate\Http\Request;
 
 class MedidasSensoresApiController extends Controller
 {
+
+    public function listarDashboard($id){
+        try {
+
+        $medidasSensores = MedidasSensores::with('sensor')
+            ->where('sensor_id', $id)
+            ->orderBy('data', 'desc')
+            ->get();
+
+        return response()->json($medidasSensores, 200);
+
+        } catch (\Exception $e) {
+
+            return response()->json([
+                'message' => 'Erro interno do servidor',
+                'erro' => $e->getMessage()
+            ], 500);
+        }
+    }
+
     public function listarApi(Request $request){
         try {
             $query = MedidasSensores::with('sensor');
