@@ -12,7 +12,7 @@
 
 <body>
 
-    <h1>Dashboard do Sensor {{ $id }}</h1>
+    <h1>Dashboard do Sensores</h1>
 
     <h2>Histórico</h2>
 
@@ -39,7 +39,7 @@
 
     <script>
 
-        const sensorId = {{ $id }};
+        const sensorId = 1; // coloque o ID do sensor no banco de dados
 
         let grafico;
 

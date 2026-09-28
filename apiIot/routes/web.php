@@ -7,5 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard/{id}', [MedidasSensoresController::class, 'listarDashboard'])
-    ->name('dashboard');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
